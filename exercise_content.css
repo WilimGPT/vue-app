@@ -1,0 +1,222 @@
+
+.exercise-container {
+    width: 100%; /* Exercise content container width */
+    overflow-x: auto; /* Horizontal scroll if the content overflows */
+
+    }
+
+    .exercise-content {
+        width: 1122px; /* A4 landscape width in pixels */
+        padding: 30px;
+        padding-left: 50px;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+
+
+    /* TITLE and LOGO */
+    .title-logo-container {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Title takes remaining space, logo takes natural width */
+    align-items: flex-start; /* Align the content to the top */
+    }
+
+    .title-div {
+        grid-column: 1 / 2;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: flex-start; /* Align text to the top */
+        justify-content: flex-start; /* Align horizontally to the left */
+        display: none;
+    }
+
+    .title-div h1 {
+        font-size: 2em;
+        margin: 0;
+        line-height: 1; /* Tighten the line height */
+        padding: 0;
+    }
+
+    .logo-div {
+        grid-column: 2 / 3;
+        height: 50px; /* Fixed height for the logo */
+        display: flex;
+        align-items: flex-start; /* Align logo to the top */
+        display: none;
+    }
+
+    .logo-div img {
+        height: 2em; /* Same height as the title text (2em) */
+        width: auto; /* Keep the width proportional */
+    }
+
+
+    /* Instructions Div - default italic styling */
+    .instructions {
+        text-align: left;
+        font-style: italic;
+        color: var(--font-color); /* Default font color */
+        font-family: var(--primary-font);
+        padding-bottom: 15px;
+        display: none;
+    }
+
+    .instructions2 {
+        text-align: left;
+        font-style: italic;
+        color: var(--primary-color); /* Default font color */
+        font-family: var(--secondary-font);
+        padding-bottom: 15px;
+        display: none;
+    }
+
+
+    /* Reading Text Styling */
+    .reading-text {
+        padding-right: 250px;
+        padding-bottom: 30px;
+        text-align: justify; /* Justify the text */
+        margin: 0; /* Ensure no extra margins */
+        font-family: var(--primary-font); /* Using the primary font */
+        color: var(--font-color); /* Default font color */
+        line-height: 1.5; /* Set line spacing to 1.5 */
+        display: none;
+    }
+
+    .reading-text p:first-child {
+    margin-top: 0; /* Remove top margin from the first paragraph */
+    }
+
+    .reading-text-2col {
+    padding-right: 200px;
+    padding-bottom: 30px;
+    text-align: justify; /* Justify the text */
+    margin: 0; /* Ensure no extra margins */
+    font-family: var(--primary-font); /* Using the primary font */
+    color: var(--font-color); /* Default font color */
+    line-height: 1.5; /* Set line spacing to 1.5 */
+    column-count: 2; /* Set the number of columns to 2 */
+    column-gap: 50px; /* Set the space between columns */
+    display: none;
+    }
+
+    .reading-text-2col p:first-child {
+    margin-top: 0; /* Remove top margin from the first paragraph */
+    }
+
+
+
+
+    /* Vocab Box Horizontal Styling */
+    .vocab-box-horizontal {
+        display: flex; /* Use flexbox to align items horizontally */
+        justify-content: center; /* Center the entire box on the page */
+        padding: 10px; /* Padding around the content inside the box */
+        padding-left: 30px; /* Padding around the content inside the box */
+        padding-right: 30px; /* Padding around the content inside the box */
+        border: 1px solid var(--primary-color); /* Primary color border */
+        background-color: var(--secondary-color); /* Secondary color background */
+        width: fit-content; /* Box size fits content */
+        margin: 0 auto; /* Center the box on the page horizontally */
+        display: none;
+    }
+
+    /* Style for the <ul> inside vocab boxes, no bullet points */
+    .vocab-box-horizontal ul {
+        list-style-type: none; /* Remove bullet points */
+        padding: 0;
+        margin: 0;
+        display: flex; /* Display list items in a row */
+        justify-content: center; /* Center the list items */
+    }
+
+    /* Style for each <li> inside the vocab box */
+    .vocab-box-horizontal ul li {
+        margin-right: 20px; /* 20px gap between list items */
+        text-align: center; /* Ensure text is centered inside the list item */
+    }
+
+    /* Remove the margin on the last item */
+    .vocab-box-horizontal ul li:last-child {
+        margin-right: 0;
+    }
+
+
+    /* Vocab and Questions Container */
+    .vocab-questions-container {
+        display: grid;
+        grid-template-columns: 1fr auto; /* Questions takes up the remaining space, vocab box takes up its own width */
+        grid-gap: 50px; /* 50px gap between questions and vocab */
+        width: 100%; /* Full container width */
+    }
+
+    /* Questions Styling */
+    .questions {
+    line-height: 1.5; /* Set line spacing to 1.5 */
+    display: none;
+    }
+    .questions li {
+    margin-bottom: 1rem; /* Adjust this value to control the gap between list items */
+    }
+
+    /* Vocab Box Vertical Styling */
+    .vocab-box-vertical {
+        border: 1px solid var(--primary-color); /* Primary color border */
+        padding: 20px; /* Padding inside the box */
+        padding-bottom: 0px; /* Padding inside the box */
+        background-color: var(--secondary-color); /* Secondary color background */
+        align-self: start; /* Align to the start of the container */
+        display: none;
+    }
+
+    /* Style for the <ul> inside vocab boxes, no bullet points */
+    .vocab-box-vertical ul {
+        list-style-type: none; /* Remove bullet points */
+        padding: 0;
+        margin: 0;
+        display: block; /* Ensure vertical display */
+    }
+
+    /* Style for each <li> inside the vocab box */
+    .vocab-box-vertical ul li {
+        margin-bottom: 20px; /* 20px gap between list items */
+        text-align: center; /* Center the text */
+    }
+
+
+    .questions {
+    line-height: 1.5; /* Set line spacing to 1.5 */
+    display: none;
+    }
+    .questions li {
+    margin-bottom: 1rem; /* Adjust this value to control the gap between list items */
+    }
+
+
+
+
+    /* CSS for page breaks in print */
+
+    .page-break {
+        border-bottom: 1px dashed black; /* Simulate a page break */
+        margin: 20px;
+        margin-top: 100px;
+    }
+
+    @media print {
+        .page-break {
+            page-break-before: always; /* Forces a page break before the element */
+        }
+    }
+
+
+    .answer-key {
+    display: inline-block; /* Makes the div only as wide as its content */
+    border: 1px solid black;
+    padding: 20px;
+    padding-right: 40px;
+    margin: 20px auto; /* Centers the div horizontally */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    display: none;
+    }  
